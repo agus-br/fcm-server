@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enviar Notificación FCM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Enviar Notificación FCM</h1>
+    <form id="form">
+        <input type="text" id="token" placeholder="Token del dispositivo" required />
+        <input type="text" id="title" placeholder="Título de la notificación" required />
+        <textarea id="body" rows="3" placeholder="Cuerpo del mensaje" required></textarea>
+        <button type="submit">Enviar Notificación</button>
+    </form>
+
+    <div id="messages"></div>
+    <!-- Modal de detalles -->
+    <div id="detailsModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3>Detalles de la Notificación</h3>
+            <p><strong>Título:</strong> <span id="modalTitle"></span></p>
+            <p><strong>Mensaje:</strong> <span id="modalBody"></span></p>
+            <p><strong>Fecha de envío:</strong> <span id="modalDate"></span></p>
+            <p><strong>Estatus:</strong> <span id="modalStatus"></span></p>
+        </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
